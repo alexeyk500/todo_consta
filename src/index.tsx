@@ -4,13 +4,16 @@ import { Provider } from 'react-redux';
 import { store } from './store/store';
 import 'normalize.css';
 import './index.css';
-import MainPage from './Pages/MainPage/MainPage';
+import App from './Components/App/App';
+import ThemeProvider from './Components/ThemeProvider/ThemeProvider';
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
 
 root.render(
   <Provider store={store}>
-    <MainPage />
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
   </Provider>
 );

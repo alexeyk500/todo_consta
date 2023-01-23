@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  color: var(--color-typo-primary);
+  background: var(--color-bg-default);
+}
+
+.content {
+  width: 1400px;
+}
