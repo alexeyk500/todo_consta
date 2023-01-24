@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/todo_consta/static/css/main.fe166fb3.css",
-    "main.js": "/todo_consta/static/js/main.488656cf.js",
+    "main.css": "/todo_consta/static/css/main.9e79d59b.css",
+    "main.js": "/todo_consta/static/js/main.1e7f59df.js",
     "static/media/Inter-Bold.woff": "/todo_consta/static/media/Inter-Bold.8f8c5ea1d3a580b04e28.woff",
     "static/media/Inter-SemiBold.woff": "/todo_consta/static/media/Inter-SemiBold.8709b7f1f6fabaaa7896.woff",
     "static/media/Inter-ExtraBold.woff": "/todo_consta/static/media/Inter-ExtraBold.589aaa938b49be935427.woff",
@@ -21,11 +21,11 @@
     "static/media/Inter-Thin.woff2": "/todo_consta/static/media/Inter-Thin.f2bbf13ef416e260c1f9.woff2",
     "static/media/Inter-Regular.woff2": "/todo_consta/static/media/Inter-Regular.91d1538224164e1fba3a.woff2",
     "index.html": "/todo_consta/index.html",
-    "main.fe166fb3.css.map": "/todo_consta/static/css/main.fe166fb3.css.map",
-    "main.488656cf.js.map": "/todo_consta/static/js/main.488656cf.js.map"
+    "main.9e79d59b.css.map": "/todo_consta/static/css/main.9e79d59b.css.map",
+    "main.1e7f59df.js.map": "/todo_consta/static/js/main.1e7f59df.js.map"
   },
   "entrypoints": [
-    "static/css/main.fe166fb3.css",
-    "static/js/main.488656cf.js"
+    "static/css/main.9e79d59b.css",
+    "static/js/main.1e7f59df.js"
   ]
 }
