@@ -26,7 +26,7 @@
     "start": "react-scripts start",
     "lint": "eslint --fix --ext .ts,.tsx,.js,.jsx ./src",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!@consta)/\"",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
