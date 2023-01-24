@@ -1,20 +1,40 @@
 import React from 'react';
 import { TextField } from '@consta/uikit/TextField';
 import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
-import { addNewTodo, selectorNewTodoTitle, setNewTodoTitle } from '../../store/todoSlice';
+import {
+  addNewTodo,
+  selectorNewTodoTitle,
+  selectorTodoList,
+  selectorTodoType,
+  setNewTodoTitle,
+  setTodoType,
+} from '../../store/todoSlice';
 import { Button } from '@consta/uikit/Button';
 import classes from './TodoInput.module.css';
+import { TodoTypeEnum } from '../types/types';
+import ModalComponent from './ModalComponent/ModalComponent';
 
 const TodoInput = () => {
   const dispatch = useAppDispatch();
+  const todoType = useAppSelector(selectorTodoType);
+  const todoList = useAppSelector(selectorTodoList);
   const newTodoTitle = useAppSelector(selectorNewTodoTitle);
+
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
 
   const onChangeHandler = ({ value }: { value: string | null }) => {
     dispatch(setNewTodoTitle(value));
   };
 
   const onClickAddTodo = () => {
-    dispatch(addNewTodo(newTodoTitle));
+    if (todoList.length < 5) {
+      if (todoType !== TodoTypeEnum.all) {
+        dispatch(setTodoType(TodoTypeEnum.all));
+      }
+      dispatch(addNewTodo(newTodoTitle));
+    } else {
+      setIsModalOpen(true);
+    }
   };
 
   return (
@@ -30,6 +50,7 @@ const TodoInput = () => {
       <div className={classes.buttonContainer}>
         <Button label={'Создать'} onClick={onClickAddTodo} />
       </div>
+      <ModalComponent isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
     </div>
   );
 };

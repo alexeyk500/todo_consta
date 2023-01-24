@@ -1,0 +1,16 @@
+.buttonContainerModal {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 96px;
+  align-items: center;
+}
+
+.modal {
+  padding: 32px;
+}
+
+.textContainer {
+  display: flex;
+  margin: 32px;
+}
