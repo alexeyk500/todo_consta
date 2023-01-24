@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSelector, createSlice } from '@reduxjs/toolkit';
 import { RootState } from './store';
 import { TodoItemType, TodoStatusEnum, TodoTypeEnum } from '../Components/types/types';
 
@@ -53,5 +53,15 @@ export const { setNewTodoTitle, addNewTodo, toggleStatusTodo, deleteTodo, setTod
 export const selectorNewTodoTitle = (state: RootState) => state.todo.newTodoTitle;
 export const selectorTodoList = (state: RootState) => state.todo.todoList;
 export const selectorTodoType = (state: RootState) => state.todo.todoType;
+
+export const selectorFilteredTodos = createSelector([selectorTodoList, selectorTodoType], (todoList, todoType) => {
+  if (todoType === TodoTypeEnum.done) {
+    return todoList.filter((item) => item.status === TodoStatusEnum.done);
+  }
+  if (todoType === TodoTypeEnum.todo) {
+    return todoList.filter((item) => item.status === TodoStatusEnum.notDone);
+  }
+  return todoList;
+});
 
 export default todoSlice.reducer;

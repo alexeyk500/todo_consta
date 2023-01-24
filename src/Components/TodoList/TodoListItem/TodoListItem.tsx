@@ -4,7 +4,7 @@ import classes from './TodoListItem.module.css';
 import { Checkbox } from '@consta/uikit/Checkbox';
 import { useAppDispatch } from '../../../hooks/hooks';
 import { IconTrash } from '@consta/uikit/IconTrash';
-import {TodoItemType, TodoStatusEnum} from '../../types/types';
+import { TodoItemType, TodoStatusEnum } from '../../types/types';
 
 type PropsType = {
   ind: number;
