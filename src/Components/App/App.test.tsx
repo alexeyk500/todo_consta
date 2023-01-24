@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
-import { store } from './store/store';
-import MainPage from './Pages/MainPage/MainPage';
+import { store } from '../../store/store';
+import MainPage from '../../Pages/MainPage/MainPage';
 
 test('renders learn react link', () => {
   render(
@@ -10,6 +10,5 @@ test('renders learn react link', () => {
       <MainPage />
     </Provider>
   );
-
   expect(screen.getByText(/learn/i)).toBeInTheDocument();
 });

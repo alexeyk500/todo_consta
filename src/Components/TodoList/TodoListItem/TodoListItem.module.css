@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.ind {
+  margin-right: 8px;
+  width: 24px;
+
+}
+
+.title {
+  margin-right: 16px;
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.checkbox{
+  margin-right: 24px;
+}
+
+.deleteBtn {
+  cursor: pointer;
+}

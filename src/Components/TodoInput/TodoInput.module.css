@@ -3,3 +3,7 @@
   padding-left: 32px;
   align-items: flex-end;
 }
+
+.container {
+  display: flex;
+}
