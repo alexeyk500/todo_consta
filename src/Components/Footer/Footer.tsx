@@ -7,6 +7,18 @@ const Footer = () => {
     <div className={classes.container}>
       <div className={classes.row}>
         <Text view="primary" size="l" className={classes.title}>
+          {'Дизайн система Consta:'}
+          <link rel="stylesheet" href="" />
+        </Text>
+        <a href="https://uikit.consta.design/libs/uikit" target="_blank" rel="noreferrer">
+          <Text view="link" size="l">
+            {'https://uikit.consta.design/libs/uikit'}
+            <link rel="stylesheet" href="" />
+          </Text>
+        </a>
+      </div>
+      <div className={classes.row}>
+        <Text view="primary" size="l" className={classes.title}>
           {'Репозиторий проекта:'}
           <link rel="stylesheet" href="" />
         </Text>
