@@ -13,8 +13,10 @@ const TodoList: React.FC = () => {
   const dispatch = useAppDispatch();
   const todoList = useAppSelector(selectorTodoList);
   const todoType = useAppSelector(selectorTodoType) as string;
-
   const filteredTodo = useAppSelector(selectorFilteredTodos);
+
+  const isTodos = todoList.length > 0;
+  const isFilteredTodos = filteredTodo.length > 0;
 
   const onChangeTodoType = ({ value }: { value: string }) => {
     dispatch(setTodoType(value));
@@ -32,8 +34,12 @@ const TodoList: React.FC = () => {
         getItemLabel={(item) => item}
         className={classes.tabs}
       />
-      {todoList.length > 0 ? (
-        filteredTodo.map((todoItem, ind) => <TodoListItem key={ind} ind={ind + 1} todoItem={todoItem} />)
+      {isTodos ? (
+        isFilteredTodos ? (
+          filteredTodo.map((todoItem, ind) => <TodoListItem key={ind} ind={ind + 1} todoItem={todoItem} />)
+        ) : (
+          <Text view="warning">{`Дел со статусом "${todoType}" - пока нет`}</Text>
+        )
       ) : (
         <Text view="warning">{'- у вас еще ничего не запланировано'}</Text>
       )}
