@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: flex-end;
+  padding-bottom: 24px;
+  padding-left: 38px;
+}
+
+.title {
+  margin-right: 16px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
