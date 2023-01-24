@@ -33,6 +33,7 @@ const TodoInput = () => {
       }
       dispatch(addNewTodo(newTodoTitle));
     } else {
+      dispatch(setNewTodoTitle(null));
       setIsModalOpen(true);
     }
   };

@@ -2,6 +2,7 @@
   "name": "todo_consta",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://alexeyk500.github.io/todo_consta",
   "dependencies": {
     "@bem-react/classname": "^1.5.12",
     "@consta/header": "^1.0.1",
@@ -24,6 +25,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "lint": "eslint --fix --ext .ts,.tsx,.js,.jsx ./src",
     "build": "react-scripts build",
     "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!@consta)/\"",
@@ -53,6 +56,7 @@
     "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-prettier": "^4.2.1",
+    "gh-pages": "^5.0.0",
     "prettier": "^2.8.3",
     "prettier-eslint": "^15.0.1"
   }
